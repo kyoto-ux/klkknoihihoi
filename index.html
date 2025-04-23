@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clã Himura</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0e2a47;
+      color: #e0f7ff;
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: radial-gradient(circle, #164a75 0%, #0e2a47 100%);
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 50, 0.5);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 153, 255, 0.4);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 30px;
+      color: #8dc9ff;
+      text-shadow: 0 0 10px rgba(0, 153, 255, 0.6);
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    input[type="password"] {
+      margin-top: 30px;
+      padding: 12px;
+      width: 80%;
+      border-radius: 8px;
+      border: none;
+      background-color: #1f3f5f;
+      color: #e0f7ff;
+      font-size: 16px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 30px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #1c5a8c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Clã Himura</h1>
+    <p>Com lâminas dançamos sob a água corrente,</p>
+    <p>A honra é um fardo que nos faz lutar.</p>
+    <p>Nascidos da bruma, com passos sutis.</p>
+
+    <input type="text" id="senha" placeholder="Digite a senha...">
+    <button onclick="verificarSenha()">Acessar</button>
+    <p id="erro"></p>
+  </div>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      if (senha === "Himura") {
+        window.location.href = "pagina2.html"; // Link da próxima página
+      } else {
+        alert("Senha incorreta. Tente novamente.");
+      }
+    }
+  </script>
+</body>
+</html>
